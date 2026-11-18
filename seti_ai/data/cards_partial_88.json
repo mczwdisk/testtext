@@ -1,0 +1,442 @@
+[
+ {
+  "num": 1,
+  "name": "Pioneer 11 Mission",
+  "text": "· 0 credits. Mission: the first time you visit Jupiter, and the first time you visit Saturn, cover that reward. Playing it is still your main action even at 0 credits. A probe already on the planet when you play the card doesn’t count — move onto it again; orbiters and landers never count as visits."
+ },
+ {
+  "num": 2,
+  "name": "Mariner 10 Mission",
+  "text": "· 0 credits. Same as Pioneer 11, for Venus and Mercury."
+ },
+ {
+  "num": 3,
+  "name": "Voyager 2 Mission",
+  "text": "· 0 credits. Same as Pioneer 11, for Uranus and Neptune."
+ },
+ {
+  "num": 4,
+  "name": "Galileo Mission",
+  "text": "· 0 credits. Same as Pioneer 11, for Venus and Jupiter."
+ },
+ {
+  "num": 5,
+  "name": "Servicing Mission",
+  "text": "— move first, then check for a probe next to Earth."
+ },
+ {
+  "num": 7,
+  "name": "Twin Probes",
+  "text": "— mission: two probes in space at once, each on a different planet (not Earth; orbiters and landers don’t count)."
+ },
+ {
+  "num": 8,
+  "name": "Quantum Data Storage",
+  "text": "— counts the data in your data pool only, not in your computer."
+ },
+ {
+  "num": 9,
+  "name": "Falcon Heavy",
+  "text": "· 3 credits. Launch two probes (plus the printed publicity); these two launches ignore your probe limit, so you can end up with 3 or 4 probes in space. Your normal launches still respect the limit afterwards."
+ },
+ {
+  "num": 10,
+  "name": "First Human in Space",
+  "text": "— publicity stops at 10; any excess is lost."
+ },
+ {
+  "num": 11,
+  "name": "Grant",
+  "text": "· 1 credit. Draw a card (from the row or blind from the deck), reveal it and gain its free-action corner (top left). A blind draw risks a corner you can’t use."
+ },
+ {
+  "num": 12,
+  "name": "Two-planet Flyby Maneuver",
+  "text": "— two different planets you move onto this turn; the one you start on counts only if you leave and come back, and lasts through later free-action moves."
+ },
+ {
+  "num": 13,
+  "name": "James Clerk Maxwell Telescope",
+  "text": "— a Scan without the base cost (purple-tech extras still cost); its signal token arrives after the Scan, too late to use in it."
+ },
+ {
+  "num": 15,
+  "name": "Atmospheric Entry",
+  "text": "· 1 credit. Remove one of your orbiters from any planet for the printed points, data and card. The emptied orbit space frees up: if it was the first space, the next orbiter there gains its 3 points again (others don’t slide)."
+ },
+ {
+  "num": 16,
+  "name": "Dragonfly",
+  "text": "· 1 credit. Land, even on a space already taken, and still gain the covered reward (the first-lander data). Works on an occupied moon if you have the moon tech."
+ },
+ {
+  "num": 17,
+  "name": "OSIRIS-REx",
+  "text": "· 1 credit. Choose one of your probes: data if it sits on asteroids, plus 1 data per orthogonally adjacent asteroid space. The probe doesn’t have to be on asteroids itself."
+ },
+ {
+  "num": 18,
+  "name": "Contracted Research",
+  "text": "— playable at 0 publicity and still gives the tech (the best way to play it)."
+ },
+ {
+  "num": 19,
+  "name": "Gravitational Slingshot",
+  "text": "· 1 credit. Two moves; each time you visit a planet this turn you may take a move instead of the publicity. Lasts the whole turn, free-action moves included; the planet you start on doesn’t count."
+ },
+ {
+  "num": 20,
+  "name": "Mercury Flyby",
+  "text": "· 1 credit. Two moves; if you visit Mercury this turn, gain the printed points — once, however many visits."
+ },
+ {
+  "num": 21,
+  "name": "Venus Flyby",
+  "text": "· 1 credit. Two moves; points for visiting Venus this turn, once."
+ },
+ {
+  "num": 22,
+  "name": "Mars Flyby",
+  "text": "· 1 credit. Two moves; points for visiting Mars this turn, once."
+ },
+ {
+  "num": 23,
+  "name": "Jupiter Flyby",
+  "text": "· 1 credit. Two moves; points for visiting Jupiter this turn, once."
+ },
+ {
+  "num": 24,
+  "name": "Saturn Flyby",
+  "text": "· 2 credits. Three moves; points for visiting Saturn this turn, once."
+ },
+ {
+  "num": 25,
+  "name": "Lightsail",
+  "text": "· 2 credits. Four moves; 1 point for each different planet you visit this turn, Earth included (the same planet twice still counts once)."
+ },
+ {
+  "num": 26,
+  "name": "Through the Asteroid Belt",
+  "text": "· 1 credit. Two moves, and leaving asteroids costs only 1 move this turn (as with the orange asteroid tech)."
+ },
+ {
+  "num": 27,
+  "name": "Hubble Space Telescope",
+  "text": "· 1 credit. One move, then mark a signal in a sector with one of your probes. Move first; the probe must be on the Solar system board, not an orbiter or lander."
+ },
+ {
+  "num": 28,
+  "name": "Kepler Space Telescope",
+  "text": "· 2 credits. As Hubble, but both signals go in the same sector with that probe."
+ },
+ {
+  "num": 29,
+  "name": "James Webb Space Telescope",
+  "text": "· 2 credits. Mark three signals: one in the probe’s sector and one in each neighbouring sector."
+ },
+ {
+  "num": 30,
+  "name": "Great Observatories Project",
+  "text": "· 2 credits. Choose up to 3 probes on the Solar system board — yours or other players’ — and mark a signal in each one’s sector."
+ },
+ {
+  "num": 32,
+  "name": "MUREP Idea Competition",
+  "text": "— you still gain 1 publicity and 2 random cards with an empty hand."
+ },
+ {
+  "num": 33,
+  "name": "Delayed Launch",
+  "text": "— triggers as you pass, so the launched probe can’t move until next round; at your probe limit, mark the mission without launching."
+ },
+ {
+  "num": 34,
+  "name": "Private Sector Investment",
+  "text": "— first an income increase (tuck a card, gain its resource now), then 1 random card per tech of your most numerous tech colour."
+ },
+ {
+  "num": 35,
+  "name": "NASA Exoplanet Archive",
+  "text": "— data in your pool and in your computer both count."
+ },
+ {
+  "num": 37,
+  "name": "Pandora Satellite",
+  "text": "— main actions at 0 credits; signals in your probe’s sector(s) give no data (return it to the supply)."
+ },
+ {
+  "num": 38,
+  "name": "Space Rendezvous",
+  "text": "— move first, then check for a shared space with any probe (yours or another player’s)."
+ },
+ {
+  "num": 42,
+  "name": "LOFAR Array",
+  "text": "— a Scan without the base cost; needs every one of the 8 sectors won or holding your signal."
+ },
+ {
+  "num": 45,
+  "name": "Allen Telescope Array",
+  "text": "· 2 credits. Discard two cards from the card row for their signals (refill only after both); if you complete a sector this turn, gain the printed move."
+ },
+ {
+  "num": 46,
+  "name": "ALMA Observatory",
+  "text": "· 2 credits. As Allen, with the printed reward for completing a sector this turn."
+ },
+ {
+  "num": 47,
+  "name": "Very Large Array",
+  "text": "· 2 credits. As Allen, with the printed reward for completing a sector this turn. Both row cards are discarded before the row refills."
+ },
+ {
+  "num": 50,
+  "name": "Square Kilometre Array",
+  "text": "· 3 credits. Discard all three row cards for their signals, then refill; 2 points per different sector you marked — up to 6."
+ },
+ {
+  "num": 51,
+  "name": "Lovell Telescope",
+  "text": "· 3 credits. A Scan action without its base cost (purple-tech extras still cost). Mission: once you have at least 8 publicity, take the reward."
+ },
+ {
+  "num": 52,
+  "name": "Parkes Observatory",
+  "text": "· 2 credits. A Scan without the base cost; 2 points per red-sector signal you mark with it."
+ },
+ {
+  "num": 53,
+  "name": "Deep Synoptic Array",
+  "text": "· 2 credits. A Scan without the base cost; 2 points per yellow-sector signal you mark with it."
+ },
+ {
+  "num": 54,
+  "name": "VERITAS Telescopes",
+  "text": "· 2 credits. A Scan without the base cost; 2 points per blue-sector signal you mark with it."
+ },
+ {
+  "num": 55,
+  "name": "Arecibo Observatory",
+  "text": "· 3 credits. A Scan without the base cost, plus one extra signal in any sector."
+ },
+ {
+  "num": 58,
+  "name": "Uranus Orbiter and Probe",
+  "text": "· 2 credits. Launch. Mission: an orbiter or lander at Uranus — its moon counts too (CGE: missing from the card text, always intended)."
+ },
+ {
+  "num": 60,
+  "name": "Trident Probe",
+  "text": "· 2 credits. Launch. Mission: an orbiter or lander at Neptune — its moon counts too (CGE ruling)."
+ },
+ {
+  "num": 65,
+  "name": "FAST Telescope Construction",
+  "text": "· 4 credits. Two row signals (discard, then refill the row), then rotate and take a telescope tech — in that order, so a card from the tech’s bonus comes from the refilled row.."
+ },
+ {
+  "num": 67,
+  "name": "Yevpatoria Telescope Construction",
+  "text": "· 3 credits. Publicity, rotate and take a telescope tech, then you may discard 1 card from your hand for its signal (sector = the card’s top-right colour).."
+ },
+ {
+  "num": 73,
+  "name": "Clean Space Initiative",
+  "text": "· 1 credit. Discard all three row cards and use their free-action corners; they’re discarded even when you can’t or don’t want to use a corner."
+ },
+ {
+  "num": 74,
+  "name": "Pre-launch Testing",
+  "text": "· 2 credits. Launch; 1 move per card with a move free-action corner that you show from your hand."
+ },
+ {
+  "num": 78,
+  "name": "SETI Institute",
+  "text": "· 2 credits. Mission with three rewards: cover one each time you scan in the right way, any order — one per triggering action."
+ },
+ {
+  "num": 79,
+  "name": "ISS",
+  "text": "· 2 credits. Mission with three rewards, one per triggering launch, any order."
+ },
+ {
+  "num": 80,
+  "name": "Cape Canaveral SFS",
+  "text": "· 1 credit. Mission with three rewards, one per triggering launch, any order."
+ },
+ {
+  "num": 81,
+  "name": "International Collaboration",
+  "text": "· 2 credits. Take a tech another player already has — no rotation and no printed tile bonus, but the free launch or 2 data of those two techs still apply."
+ },
+ {
+  "num": 84,
+  "name": "Sample Return",
+  "text": "· 1 credit. Remove one of your landers from a planet or moon to mark a trace. A freed first space gives its 2 data again to the next lander."
+ },
+ {
+  "num": 88,
+  "name": "Chandra Space Observatory",
+  "text": "· 2 credits. Two signals in a sector with your probe. Mission: signals in 4 different sectors — counted on the board when you complete it; you may complete it before the sector you just filled resolves."
+ },
+ {
+  "num": 89,
+  "name": "NIAC Program",
+  "text": "· 2 credits. Draw 3 cards (shown as “3?”). Mission: no cards in hand — Exertian cards don’t count as in hand."
+ },
+ {
+  "num": 91,
+  "name": "Fusion Reactor",
+  "text": "· 3 credits. The printed reward per card you have tucked for energy income, then tuck this card (an income increase: gain its resource now)."
+ },
+ {
+  "num": 92,
+  "name": "NASA Image of the Day",
+  "text": "· 3 credits. Publicity, the printed reward per card tucked for card income, then tuck this card for income."
+ },
+ {
+  "num": 93,
+  "name": "Government Funding",
+  "text": "· 3 credits. The printed reward per card tucked for credit income, then tuck this one too — count first, tuck after."
+ },
+ {
+  "num": 98,
+  "name": "Coronal Spectrograph",
+  "text": "· 1 credit. Mark a purple trace for a species where you already have a yellow one (discovery and overflow spaces count as that species’)."
+ },
+ {
+  "num": 99,
+  "name": "Electron Microscope",
+  "text": "· 1 credit. Mark a yellow trace for a species where you already have a blue one."
+ },
+ {
+  "num": 100,
+  "name": "Exascale Supercomputer",
+  "text": "· 1 credit. Mark a blue trace for a species where you already have a purple one."
+ },
+ {
+  "num": 101,
+  "name": "Telescope Time Allocation",
+  "text": "· 2 credits. Mission: one reward per Scan, any order. If the Scan completes a sector you may cover a reward first and use its extra signal before the sector resolves."
+ },
+ {
+  "num": 103,
+  "name": "Westerbork Synthesis Radio Telescope",
+  "text": "· 3 credits. Rotate and take a telescope tech. Mission: win the same sector twice.."
+ },
+ {
+  "num": 106,
+  "name": "Strategic Planning",
+  "text": "· 1 credit. Mission: when you pay 1, 2 or 3 credits to play a card as your main action, cover the matching reward. Discarding a card doesn’t trigger it."
+ },
+ {
+  "num": 107,
+  "name": "First Black Hole Photo",
+  "text": "· 2 credits. Mark a blue trace. Mission: one reward per later blue trace, any order."
+ },
+ {
+  "num": 112,
+  "name": "Planetary Geologic Mapping",
+  "text": "· 3 credits. Rotate and take a probe tech. Mission: an orbiter and a lander at the same planet — a lander on its moon counts (CGE ruling).."
+ },
+ {
+  "num": 113,
+  "name": "Solvay Conference",
+  "text": "· 2 credits. End-of-game: score the gold tile you didn’t mark at its lowest (rightmost) tier; if you marked fewer than 3, pick one of the unmarked."
+ },
+ {
+  "num": 114,
+  "name": "Planet Hunters",
+  "text": "· 1 credit. Draw a card, then discard up to 3 cards from your hand for their signals."
+ },
+ {
+  "num": 116,
+  "name": "Control Center",
+  "text": "· 1 credit. Mission: when you mark a signal in a yellow, red or blue sector, cover that colour’s reward. One Scan can trigger several; older signals don’t."
+ },
+ {
+  "num": 117,
+  "name": "Lunar Gateway",
+  "text": "· 3 credits. Land, even on a moon without the tech. Mission: one reward per later orbit or landing, any order."
+ },
+ {
+  "num": 118,
+  "name": "PLATO",
+  "text": "· 1 credit. Three signals in a sector with your probe, but return their data to the supply — good for excess signals."
+ },
+ {
+  "num": 119,
+  "name": "PIXL",
+  "text": "· 3 credits. Rotate and take a computer tech, then 1 point per publicity you have. You may place data mid-action to gain publicity first.."
+ },
+ {
+  "num": 120,
+  "name": "Orbiting Lagrange Point",
+  "text": "· 1 credit. A signal in a sector with your probe; if it’s your only signal there (none before), the card returns to your hand — even if the signal completes the sector."
+ },
+ {
+  "num": 122,
+  "name": "Amateur Astronomers",
+  "text": "· 2 credits. Three times, one by one: discard the deck’s top card for its signal. Mandatory, even if it helps others."
+ },
+ {
+  "num": 123,
+  "name": "Asteroids Flyby",
+  "text": "· 0 credits. One move; data for visiting asteroids this turn, once. A main action despite costing 0."
+ },
+ {
+  "num": 124,
+  "name": "Cometary Encounter",
+  "text": "· 1 credit. Two moves; points for visiting a comet this turn, once."
+ },
+ {
+  "num": 125,
+  "name": "Trajectory Correction",
+  "text": "· 1 credit. One move; points and publicity if you move within the same ring (same distance from the Sun) this turn."
+ },
+ {
+  "num": 126,
+  "name": "Euclid Telescope Construction",
+  "text": "· 3 credits. Take an orange or a purple tech (one rotation either way). End-of-game: points per matching item, as printed."
+ },
+ {
+  "num": 127,
+  "name": "NEAR Shoemaker",
+  "text": "· 1 credit. Publicity now; end-of-game 13 points only if one of your probes is on asteroids when the game ends — a rotation after you pass can push it off."
+ },
+ {
+  "num": 128,
+  "name": "Advanced Navigation System",
+  "text": "· 1 credit. Mission: each visit to a planet other than Earth covers one reward; revisiting the same planet counts again."
+ },
+ {
+  "num": 129,
+  "name": "Asteroid Research",
+  "text": "· 0 credits. Mission: each time you visit asteroids on your turn, cover one reward — a rotation on your turn that pushes your probe onto asteroids counts."
+ },
+ {
+  "num": 133,
+  "name": "Optimal Launch Window",
+  "text": "· 2 credits. Launch, then 1 move per other planet or comet lined up with Earth outward from the Sun (up to 3)."
+ },
+ {
+  "num": 134,
+  "name": "Herschel Space Observatory",
+  "text": "· 1 credit. A signal in a sector with your probe. Mission: signals in 4 different sectors, counted on the board."
+ },
+ {
+  "num": 135,
+  "name": "Noto Radio Observatory",
+  "text": "· 2 credits. A Scan without the base cost (purple-tech extras still cost), plus publicity."
+ },
+ {
+  "num": 136,
+  "name": "Algonquin Radio Observatory",
+  "text": "· 1 credit. A signal in each of the four colours’ sectors, but no data from them."
+ },
+ {
+  "num": 138,
+  "name": "Cornell University",
+  "text": "· 1 credit. Mission: when you discard a card from your hand for its free-action corner, cover the reward matching that corner (publicity, data or move); stronger alien corners count if they include it."
+ }
+]

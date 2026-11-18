@@ -78,6 +78,7 @@ class Player:
     techs: set = field(default_factory=set)  # stack index
     passed: bool = False
     turns_this_round: int = 0
+    ledger: dict = field(default_factory=dict)  # 得点の由来（分析用）
     # 統計
     stats: dict = field(default_factory=lambda: {
         "launch": 0, "orbit": 0, "land": 0, "scan": 0, "analyze": 0,
@@ -96,6 +97,7 @@ class Game:
         for i, g in enumerate(genomes):
             p = Player(seat=i, genome=g)
             p.pts = R["start_points_by_seat"][i]
+            p.ledger["start"] = p.pts  # 開始得点（座席順 1〜4）
             self.players.append(p)
         self.n = n
         # セクター: 残りデータ数・マーカー列（置かれた順）
@@ -111,6 +113,11 @@ class Game:
         self.probe_pos: dict[int, int | None] = {p.seat: None for p in self.players}
 
     # ---------- 基本ユーティリティ ----------
+    def award(self, p: Player, amount: int, source: str):
+        """得点を加算し、どの行動から得たかを記録する（分析用）。"""
+        p.pts += amount
+        p.ledger[source] = p.ledger.get(source, 0) + amount
+
     def gain_pub(self, p: Player, amount: int):
         p.pub = min(10, p.pub + amount)  # 上限10（ルールブック p.19 の注意）
 
@@ -198,7 +205,7 @@ class Game:
         p.en += pd["orbit_energy"]
         if not self.first_orbit_taken[pl]:
             self.first_orbit_taken[pl] = True
-            p.pts += R["first_orbit_points"]
+            self.award(p, R["first_orbit_points"], "orbit_first")
         p.orbiters.append(pl)
         p.probe_on_board = False
         self.probe_pos[p.seat] = None
@@ -208,7 +215,7 @@ class Game:
         pl = self.probe_planet(p)
         pd = PLANETS[pl]
         p.en -= self.land_cost(p)
-        p.pts += pd["land_points"]
+        self.award(p, pd["land_points"], "land")
         p.traces["yellow"] += pd["yellow_trace"]
         if not self.first_land_taken[pl]:
             self.first_land_taken[pl] = True
@@ -227,7 +234,7 @@ class Game:
         markers = self.sector_markers[sector]
         markers.append(p.seat)
         if len(markers) == 2:
-            p.pts += R["second_marker_points"]  # 2番目のマーカーで2点（p.13）
+            self.award(p, R["second_marker_points"], "scan_second_marker")  # p.13
 
     def resolve_completed_sectors(self):
         for s in range(NUM_SECTORS):
@@ -247,7 +254,7 @@ class Game:
                         winner = seat
                         break
                 wp = self.players[winner]
-                wp.pts += A["sector_win_points"]
+                self.award(wp, A["sector_win_points"], "sector_win")
                 wp.stats["sector_wins"] += 1
                 if A.get("sector_win_trace") == "purple":
                     wp.traces["purple"] += 1  # 仮決定（Ludex由来）
@@ -308,8 +315,8 @@ class Game:
         p.techs.add(best)
         if not self.stack_first_taken[best]:
             self.stack_first_taken[best] = True
-            p.pts += R["first_research_points"]
-        p.pts += A["tech_bonus_points_per_tech"]
+            self.award(p, R["first_research_points"], "research_first")
+        self.award(p, A["tech_bonus_points_per_tech"], "research_tech_bonus")
         p.cr += A["tech_bonus_credit_per_tech"]
         p.stats["research"] += 1
 
@@ -418,14 +425,21 @@ class Game:
                 self.income()
         # 生命痕跡の得点（仮定: 1痕跡につき trace_points_each 点。ルールブックの数値ではない）
         for p in self.players:
-            p.pts += A["trace_points_each"] * sum(p.traces.values())
+            for color, n in p.traces.items():
+                if n:
+                    self.award(p, A["trace_points_each"] * n, f"trace_{color}")
         return [p.pts for p in self.players]
 
 
 def run(genomes: list[Genome]) -> tuple[list[int], list[dict]]:
     g = Game(genomes)
     scores = g.play()
-    return scores, [p.stats for p in g.players]
+    out = []
+    for p in g.players:
+        st = dict(p.stats)
+        st["ledger"] = dict(p.ledger)
+        out.append(st)
+    return scores, out
 
 
 if __name__ == "__main__":

@@ -6,6 +6,7 @@
 from __future__ import annotations
 
 import json
+import os
 import random
 import sys
 from dataclasses import asdict
@@ -13,10 +14,10 @@ from dataclasses import asdict
 from seti_sim import Genome, RING, TECH_TYPES, run
 
 N_PLAYERS = 4
-POP = 40
-GENS = 40
-GAMES_PER_EVAL = 12
-ELITE = 4
+POP = int(os.environ.get("GA_POP", 100))
+GENS = int(os.environ.get("GA_GENS", 60))
+GAMES_PER_EVAL = int(os.environ.get("GA_GAMES", 40))  # 1個体あたり、世代ごとの対戦数
+ELITE = 5
 MUT_RATE = 0.2
 MUT_SIGMA = 0.5
 

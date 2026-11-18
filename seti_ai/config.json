@@ -1,26 +1,102 @@
 {
   "_note": "惑星値はユーザー指定の近似値。『assumption』と書かれた項目は、ルールブックから確認できず私が置いた仮定。結果はこれらに依存する。",
-  "ring_order": ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"],
+  "ring_order": [
+    "Mercury",
+    "Venus",
+    "Earth",
+    "Mars",
+    "Jupiter",
+    "Saturn",
+    "Uranus",
+    "Neptune"
+  ],
   "planets": {
-    "Mercury": {"orbit_credit": 1, "orbit_energy": 0, "land_points": 2, "yellow_trace": 1, "first_land_data": 1, "publicity": 1},
-    "Venus":   {"orbit_credit": 1, "orbit_energy": 1, "land_points": 3, "yellow_trace": 1, "first_land_data": 1, "publicity": 1},
-    "Earth":   {"orbit_credit": 0, "orbit_energy": 0, "land_points": 0, "yellow_trace": 0, "first_land_data": 0, "publicity": 0},
-    "Mars":    {"orbit_credit": 1, "orbit_energy": 0, "land_points": 3, "yellow_trace": 1, "first_land_data": 1, "publicity": 1},
-    "Jupiter": {"orbit_credit": 2, "orbit_energy": 0, "land_points": 4, "yellow_trace": 1, "first_land_data": 1, "publicity": 1},
-    "Saturn":  {"orbit_credit": 1, "orbit_energy": 1, "land_points": 3, "yellow_trace": 1, "first_land_data": 1, "publicity": 1},
-    "Uranus":  {"orbit_credit": 1, "orbit_energy": 0, "land_points": 3, "yellow_trace": 1, "first_land_data": 1, "publicity": 1},
-    "Neptune": {"orbit_credit": 1, "orbit_energy": 0, "land_points": 3, "yellow_trace": 1, "first_land_data": 1, "publicity": 1}
+    "Mercury": {
+      "orbit_credit": 1,
+      "orbit_energy": 0,
+      "land_points": 2,
+      "yellow_trace": 1,
+      "first_land_data": 1,
+      "publicity": 1
+    },
+    "Venus": {
+      "orbit_credit": 1,
+      "orbit_energy": 1,
+      "land_points": 3,
+      "yellow_trace": 1,
+      "first_land_data": 1,
+      "publicity": 1
+    },
+    "Earth": {
+      "orbit_credit": 0,
+      "orbit_energy": 0,
+      "land_points": 0,
+      "yellow_trace": 0,
+      "first_land_data": 0,
+      "publicity": 0
+    },
+    "Mars": {
+      "orbit_credit": 1,
+      "orbit_energy": 0,
+      "land_points": 3,
+      "yellow_trace": 1,
+      "first_land_data": 1,
+      "publicity": 1
+    },
+    "Jupiter": {
+      "orbit_credit": 2,
+      "orbit_energy": 0,
+      "land_points": 4,
+      "yellow_trace": 1,
+      "first_land_data": 1,
+      "publicity": 1
+    },
+    "Saturn": {
+      "orbit_credit": 1,
+      "orbit_energy": 1,
+      "land_points": 3,
+      "yellow_trace": 1,
+      "first_land_data": 1,
+      "publicity": 1
+    },
+    "Uranus": {
+      "orbit_credit": 1,
+      "orbit_energy": 0,
+      "land_points": 3,
+      "yellow_trace": 1,
+      "first_land_data": 1,
+      "publicity": 1
+    },
+    "Neptune": {
+      "orbit_credit": 1,
+      "orbit_energy": 0,
+      "land_points": 3,
+      "yellow_trace": 1,
+      "first_land_data": 1,
+      "publicity": 1
+    }
   },
   "rules_from_rulebook": {
     "start_publicity": 4,
     "start_credits": 4,
     "start_energy": 3,
-    "start_points_by_seat": [1, 2, 3, 4],
+    "start_points_by_seat": [
+      1,
+      2,
+      3,
+      4
+    ],
     "launch_cost_credits": 2,
-    "orbit_cost": {"credits": 1, "energy": 1},
+    "orbit_cost": {
+      "credits": 1,
+      "energy": 1
+    },
     "land_cost_energy": 3,
     "land_cost_energy_with_orbiter": 2,
-    "scan_cost": {"credits": 1, "energy": 2},
+    "scan_cost": {
+      "credits": 1,
+      "energy": 2
+    },
     "analyze_cost_energy": 1,
     "research_cost_publicity": 6,
     "buy_card_publicity": 3,
@@ -32,7 +108,7 @@
     "second_marker_points": 2
   },
   "assumptions": {
-    "computer_top_row_slots": 4,
+    "computer_top_row_slots": 6,
     "sector_count": 8,
     "sector_data_per_sector": 4,
     "sector_win_points": 3,
@@ -43,15 +119,66 @@
     "tech_types": 3,
     "tech_per_type": 4,
     "trace_points_each": 1,
-    "trace_types": ["pink", "yellow", "blue"],
+    "trace_types": [
+      "pink",
+      "yellow",
+      "blue"
+    ],
     "analyze_trace_type": "blue",
     "scan_trace_type": "pink",
-    "income_per_round": {"credits": 3, "energy": 2},
+    "income_per_round": {
+      "credits": 3,
+      "energy": 2
+    },
     "move_cost_energy": 1,
     "cards_modelled": false,
     "rotation_modelled": false,
     "alien_species_modelled": false,
     "gold_tiles_modelled": false,
-    "planet_geometry": "惑星は一直線（ring_order）に並ぶと仮定。実際のリング回転は無視。"
+    "planet_geometry": "惑星は一直線（ring_order）に並ぶと仮定。実際のリング回転は無視。",
+    "trace_points_note": "仮定。ルールブックの生命痕跡の得点は未確認。",
+    "sector_win_trace": "purple"
+  },
+  "provisional_rules": {
+    "_note": "仮決定。ルールブック（英語PDF）または送付されたルール資料で確認した値。確定ではないものは status='provisional' と明記する。",
+    "computer_top_row_slots": {
+      "value": 6,
+      "status": "provisional",
+      "source": "送付された報告（中）。ルールブックp.14の図で未確定",
+      "previous": 4
+    },
+    "sector_data_per_sector": {
+      "value": 4,
+      "status": "provisional",
+      "source": "送付資料の『通常4個』。ルールブックには文章の記載なし"
+    },
+    "trace_colors": {
+      "scan": "pink",
+      "landing": "yellow",
+      "analyze": "blue",
+      "status": "confirmed_rulebook_p11_p12_p14"
+    },
+    "sector_win_trace": {
+      "value": "purple",
+      "status": "provisional_unverified_source",
+      "source": "Ludex（非公式）。公式ルールブックでは未確定。ユーザー指示により仮採用"
+    },
+    "second_place_marker": {
+      "value": "1st_space",
+      "status": "confirmed_rulebook_p13"
+    },
+    "research_cost_publicity": {
+      "value": 6,
+      "status": "confirmed_rulebook_p16"
+    },
+    "landing_cost_energy": {
+      "value": 3,
+      "with_orbiter": 2,
+      "status": "confirmed_rulebook_p11"
+    },
+    "trace_points_each": {
+      "value": 1,
+      "status": "assumption_not_in_rulebook"
+    }
   }
 }

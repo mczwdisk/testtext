@@ -74,7 +74,7 @@ class Player:
     probe_on_board: bool = False
     orbiters: list = field(default_factory=list)  # 惑星名
     landers: list = field(default_factory=list)
-    traces: dict = field(default_factory=lambda: {"pink": 0, "yellow": 0, "blue": 0})
+    traces: dict = field(default_factory=lambda: {"pink": 0, "yellow": 0, "blue": 0, "purple": 0})
     techs: set = field(default_factory=set)  # stack index
     passed: bool = False
     turns_this_round: int = 0
@@ -125,9 +125,6 @@ class Game:
             p.pool -= 1
             p.comp += 1
 
-    def tech_points(self, p: Player):
-        return 0
-
     # ---------- 合法手の判定 ----------
     def probe_planet(self, p: Player) -> str | None:
         idx = self.probe_pos[p.seat]
@@ -139,8 +136,7 @@ class Game:
         return (not p.probe_on_board) and p.cr >= R["launch_cost_credits"]
 
     def can_scan(self, p: Player) -> bool:
-        c = R["launch_cost_credits"] - 1  # 1クレジット
-        return p.cr >= 1 and p.en >= 2
+        return p.cr >= 1 and p.en >= 2  # スキャンは1クレジット＋2エネルギー
 
     def can_analyze(self, p: Player) -> bool:
         return p.en >= 1 and p.comp >= p.computer_slots
@@ -169,8 +165,8 @@ class Game:
                 else R["land_cost_energy"])
 
     def can_land(self, p: Player) -> bool:
-        c = self.land_cost(p)
-        return c is not None and p.en >= c
+        cost = self.land_cost(p)
+        return cost is not None and p.en >= cost
 
     # ---------- アクション実行 ----------
     def do_launch(self, p: Player):
@@ -253,6 +249,8 @@ class Game:
                 wp = self.players[winner]
                 wp.pts += A["sector_win_points"]
                 wp.stats["sector_wins"] += 1
+                if A.get("sector_win_trace") == "purple":
+                    wp.traces["purple"] += 1  # 仮決定（Ludex由来）
                 for seat in set(markers):
                     self.gain_pub(self.players[seat],
                                   A["sector_win_publicity_contributors"])
@@ -418,6 +416,9 @@ class Game:
                         raise RuntimeError("turn limit exceeded")
             if rnd < R["rounds"] - 1:
                 self.income()
+        # 生命痕跡の得点（仮定: 1痕跡につき trace_points_each 点。ルールブックの数値ではない）
+        for p in self.players:
+            p.pts += A["trace_points_each"] * sum(p.traces.values())
         return [p.pts for p in self.players]
 
 
